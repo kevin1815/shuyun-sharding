@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: key-generator
+  resources:
+    add-mappings: false
+  mvc:
+    throw-exception-if-no-handler-found: true
+
+server:
+  port: 8080
+  servlet:
+    context-path: /key-generator/v1
+
+logging:
+  level:
+    com.shuyun: info
+  file: '/var/log/key-generator/v1/dev/sandbox/1/key-generator.log'
+  pattern:
+    file: '[%d{yyyy-MM-dd HH:mm:ss.SSS,GMT+8}] [%-5level] [%class{0}:%method:%line] [%t] [-[%msg]-] %n'
